@@ -1,0 +1,24 @@
+application:
+  max-allowed-books: 2
+
+server:
+  port: 8085
+
+spring:
+  application:
+    name: issues-client
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/mydb
+    username: nikita
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
